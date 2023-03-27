@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<title>checkboxToggle | DonaldVN</title>
+		<style>
+			html {
+				font-size: 62.5%;
+				font-family: 'Poppins', sans-serif;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			/* CHECKBOX TOGGLE */
+
+			.toggle {
+				cursor: pointer;
+			}
+			.toggle__input {
+				display: none;
+			}
+			.toggle__bar {
+				display: flex;
+				align-items: center;
+				width: 10rem;
+				height: 4rem;
+				background-color: #fff;
+				border: 0.3rem solid #000;
+				border-radius: 5rem;
+				padding: 0.5rem;
+				transition: background-color 0.3s linear;
+			}
+			.toggle__spin {
+				width: 3rem;
+				height: 3rem;
+				background-color: #000;
+				border-radius: 5rem;
+				transition: transform 0.3s linear, background-color 0.3s linear;
+			}
+			.toggle__input:checked + .toggle__bar {
+				background-color: #000;
+			}
+
+			.toggle__input:checked + .toggle__bar .toggle__spin {
+				transform: translateX(5.5rem);
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="toggle-input" class="toggle">
+			<input
+				type="checkbox"
+				name="toggle-input"
+				id="toggle-input"
+				class="toggle__input"
+			/>
+			<div class="toggle__bar">
+				<div class="toggle__spin"></div>
+			</div>
+		</label>
+	</body>
+</html>
